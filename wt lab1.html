@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WT ASSIGNMENT 1</title>
+</head>
+<body>
+    <h1><ins><center>KIIT CENTRAL LIBRARY</center></ins></h1>
+    <img align="right" src="C:\Users\KIIT\OneDrive\Desktop\VS CODE\.vscode\IMG-20230118-WA0007.jpg" alt="kiit logo"width=300 height=150>
+    <marquee bgcolor="green">STUDENT REGISTRATION FORM</marquee>
+    <form name="details" action="javascript:submit()">
+        <fieldset>
+            <legend><b>Student details</b></legend>
+            <label><b>NAME:</b></label>
+            <INPUT TYPE="text"name="firstname">
+            <label><b>SECOND NAME:</b></label>
+            <INPUT TYPE="text"name="secondname">
+            <label><b>LAST NAME:</b></label>
+            <INPUT TYPE="text"name="lastname"><br><br>
+            <label><i>EMAIL:</i></label>
+            <INPUT TYPE="email"name="emailaddress"><br><br>
+            <label><i>PASSWORD:</i></label>
+            <INPUT TYPE="password"name="password"><br><br>
+            <label>CONFIRM YOUR PASSWORD:</label>
+            <INPUT TYPE="password"name="confirmpassword"><br><br>
+            <label for="gender">GENDER:</label>
+            <input type="radio"id="gender"name="gen">MALE
+            <input type="radio"id="gender"name="gen">FEMALE
+            <input type="radio"id="gender"name="gen">OTHERS <br><br>
+            <label>CORRESPONDENCE ADDRESS:</label><br>
+            <textarea name="addr1" id="address" cols="30" rows="3">Correspondence Address</textarea><br>
+            <label>PERMANENT ADDRESS:</label><br>
+            <textarea name="addr2" id="address" cols="30" rows="3">Permanent Address</textarea><br>
+            <label>DOMICILE STATE:</label><br>
+            <select name="domicile" id="state"multiple="true">
+            <optgroup label="EAST">
+            <option>Odisha
+            <option>West Bengal
+            </optgroup>
+            <optgroup label="WEST">
+            <option>Gujarat
+            <option>Maharastra    
+            </optgroup>
+            <optgroup label="NORTH">
+            <option>Punjab
+            <option>Haryana
+            <option>Uttarpradesh
+            <option>Bihar
+            <option>Jharkhand
+            </optgroup>
+            <optgroup label="SOUTH">
+            <option>Andhra pradesh
+            <option>Telegana
+            </optgroup>
+           </select><br><br>
+           <input type="submit"name="submit"VALUE="SIGN UP">
+        </fieldset>
+    </form>
+    <script>
+        let submit=() => {
+        let values="";
+        values+="FULL NAME:"+document.getElementsByName("firstname")[0].value +document.getElementsByName("secondname")[0].value+document.getElementsByName("lastname")[0].value + "\n";
+        values+="USER EMAIL:"+document.getElementsByName("emailaddress")[0].value+"\n";
+        values+="STUDENT ADDRESS:"+document.getElementsByName("addr1")[0].value+"\n";
+        alert(values);
+           };
+    </script>
+</body>
+</html>
